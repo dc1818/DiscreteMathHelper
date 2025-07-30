@@ -26,6 +26,21 @@
  * ```
  */
 
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+// Your root React component
+function App() {
+  return (
+    <div>
+      <h1>Hello from React in Electron!</h1>
+      {/* Replace with actual app components */}
+    </div>
+  );
+}
+
+// Mount the React application into the #root element
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App />);
